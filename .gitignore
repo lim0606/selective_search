@@ -1,0 +1,7 @@
+*.mat
+*.swp
+etc/
+etc
+etc/*
+ilsvrc_2015
+ilsvrc_2015/
