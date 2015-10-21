@@ -1,4 +1,4 @@
-function op_selective_search_ilsvrc15(first_el, last_el)
+function op_selective_search_ilsvrc15_val(first_el, last_el)
 
 %% init selective search library 
 init;
