@@ -1,4 +1,4 @@
-load ilsvrc_2015_train.mat
+%load ilsvrc_2015_train.mat
 %load ilsvrc_2015_msc_train.mat
 
 root_folder = '../ilsvrc_2015';

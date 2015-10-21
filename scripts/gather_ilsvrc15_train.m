@@ -1,3 +1,4 @@
+close all; clear; clc;
 init;
 
 ROOT_ILSVRC15 = '/media/data1/image/ilsvrc15/ILSVRC2015/';
@@ -74,3 +75,5 @@ fprintf('size(boxes, 1): %d, size(images, 1): %d, size(gray_img_indices, 1): %d,
 
 %save(['ilsvrc_2015_train.mat'], 'boxes', 'images', '-v7.3');
 %save(['ilsvrc_2015_msc_train.mat'], 'gray_img_indices', 'img_indices', 'large_img_indices');
+
+convert_mat_to_txt.m
