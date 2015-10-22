@@ -1,4 +1,4 @@
-close all; clear; clc;
+close all; clear all;
 init;
 
 ROOT_ILSVRC15 = '/media/data1/image/ilsvrc15/ILSVRC2015/';
@@ -16,18 +16,32 @@ num_images = size(images, 1);
 n = 10000;
 ps = 1:n:num_images;
 
-num_images = size(images, 1);
-boxes = cell(num_images, 1);
+%num_images = size(images, 1);
+%boxes = cell(num_images, 1);
 
-p = 1; 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+for p = 1:length(ps) 
+  tic; 
+  first_el = ps(p);
+  last_el = min(ps(p)+n-1, num_images);
+  fprintf('first_el: %d, last_el: %d\n', first_el, last_el);
+
+  aa = load(['../msc/ilsvrc15_', num2str(first_el), '_', num2str(last_el), '.mat']);
+
+  convert_mat_to_txt(aa.boxes, aa.images);
+  %boxes(first_el:last_el) = aa.boxes; 
+  %images(first_el:last_el) = aa.images;
+
+  t = toc; 
+  fprintf('p: %d/%d (elapsed time is %.3f seconds)\n', p, length(ps), t); 
+end
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+fprintf('gathering miscellaneous information-------------------------\n'); 
+p = 1;
 first_el = ps(p);
 last_el = min(ps(p)+n-1, num_images);
 fprintf('first_el: %d, last_el: %d\n', first_el, last_el);
-
-aa = load(['../msc/ilsvrc15_', num2str(first_el), '_', num2str(last_el), '.mat']);
-
-boxes(first_el:last_el) = aa.boxes; 
-images(first_el:last_el) = aa.images; 
 
 bb = load(['../msc/ilsvrc15_msc_', num2str(first_el), '_', num2str(last_el), '.mat']);
 bb.gray_img_indices = bb.img_indices(bb.gray_img_indices);
@@ -43,16 +57,11 @@ large_img_indices = bb.large_img_indices;
 
 fprintf('size(gray_img_indices, 1): %d, size(large_img_indices, 1): %d\n', size(gray_img_indices, 1), size(large_img_indices, 1)); 
 
-for p = 2:length(ps) 
+for p = 1:length(ps) 
   tic; 
   first_el = ps(p);
   last_el = min(ps(p)+n-1, num_images);
   fprintf('first_el: %d, last_el: %d\n', first_el, last_el);
-
-  aa = load(['../msc/ilsvrc15_', num2str(first_el), '_', num2str(last_el), '.mat']);
-
-  boxes(first_el:last_el) = aa.boxes; 
-  images(first_el:last_el) = aa.images;
 
   bb = load(['../msc/ilsvrc15_msc_', num2str(first_el), '_', num2str(last_el), '.mat']);
   bb.gray_img_indices = bb.img_indices(bb.gray_img_indices);
@@ -71,9 +80,9 @@ for p = 2:length(ps)
   fprintf('p: %d/%d (elapsed time is %.3f seconds)\n', p, length(ps), t); 
 end
 
-fprintf('size(boxes, 1): %d, size(images, 1): %d, size(gray_img_indices, 1): %d, size(large_img_indices, 1): %d\n', size(boxes, 1), size(images,1), size(gray_img_indices, 1), size(large_img_indices, 1)); 
+%fprintf('size(boxes, 1): %d, size(images, 1): %d, size(gray_img_indices, 1): %d, size(large_img_indices, 1): %d\n', size(boxes, 1), size(images,1), size(gray_img_indices, 1), size(large_img_indices, 1)); 
+fprintf('size(gray_img_indices, 1): %d, size(large_img_indices, 1): %d\n', size(gray_img_indices, 1), size(large_img_indices, 1)); 
 
 %save(['ilsvrc_2015_train.mat'], 'boxes', 'images', '-v7.3');
-%save(['ilsvrc_2015_msc_train.mat'], 'gray_img_indices', 'img_indices', 'large_img_indices');
+save(['ilsvrc_2015_msc_train.mat'], 'gray_img_indices', 'img_indices', 'large_img_indices');
 
-convert_mat_to_txt.m

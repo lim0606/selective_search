@@ -1,5 +1,6 @@
 %load ilsvrc_2015_train.mat
 %load ilsvrc_2015_msc_train.mat
+function [] = convert_mat_to_txt(boxes, images)
 
 root_folder = '../ilsvrc_2015';
 if ~exist(root_folder, 'dir')
@@ -11,8 +12,6 @@ if ~exist(root_folder, 'dir')
   mkdir(root_folder);
 end
 
-
-idx = 1;
 tic; 
 for idx=1:size(images,1)
     filename = images{idx};
@@ -32,13 +31,25 @@ for idx=1:size(images,1)
     xmin = boxes{idx}(i,1); 
     ymin = boxes{idx}(i,2); 
     xmax = boxes{idx}(i,3); 
-    ymax = boxes{idx}(i,4);  
-    fprintf(fileID, '%d %d %d %d\n', xmin, ymin, xmax, ymax); 
+    ymax = boxes{idx}(i,4); 
+    
+    width = xmax - xmin;
+    height = ymax - ymin;  
+    assert(width > 0, ['width: ', num2str(width), ', xmax: ', num2str(xmax), ', xmin: ', num2str(xmin)]); 
+    assert(height > 0, ['height: ', num2str(height), ', ymax: ', num2str(ymax), ', ymin: ', num2str(ymin)]); 
+    fprintf(fileID, '%d %d %d %d\n', floor(xmin), floor(ymin), floor(xmax), floor(ymax)); 
     end
-    fclose(fileID); 
-    if mod(idx, 10000) == 0 || idx == size(images,1)
-        t = toc; 
-        fprintf('%d / %d (elapsed time is %.4f seconds per 10000 images)\n', idx, size(images,1), t); 
-        tic; 
-    end  
+    fclose(fileID);
+
+    if mod(idx, 1000) == 0 || idx == size(images,1)
+        t = toc;
+        fprintf('%d / %d (elapsed time is %.4f seconds per %d images)\n', idx, size(images,1), t, mod(idx-1, 1000)+1);
+        tic;
+    end
+ 
+end
+
+%t = toc; 
+%fprintf('Elapsed time is %.4f seconds for %d images\n', t, size(images,1)); 
+
 end
