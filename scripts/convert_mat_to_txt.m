@@ -28,16 +28,16 @@ for idx=1:size(images,1)
     filename = [root_folder, '/', filename, '.txt'];     
     fileID = fopen(filename, 'w');
     for i=1:size(boxes{idx},1)
-    xmin = boxes{idx}(i,1); 
-    ymin = boxes{idx}(i,2); 
-    xmax = boxes{idx}(i,3); 
-    ymax = boxes{idx}(i,4); 
+    ymin = boxes{idx}(i,1); 
+    xmin = boxes{idx}(i,2); 
+    ymax = boxes{idx}(i,3); 
+    xmax = boxes{idx}(i,4); 
     
-    width = xmax - xmin;
-    height = ymax - ymin;  
-    assert(width > 0, ['width: ', num2str(width), ', xmax: ', num2str(xmax), ', xmin: ', num2str(xmin)]); 
-    assert(height > 0, ['height: ', num2str(height), ', ymax: ', num2str(ymax), ', ymin: ', num2str(ymin)]); 
-    fprintf(fileID, '%d %d %d %d\n', floor(xmin), floor(ymin), floor(xmax), floor(ymax)); 
+    width = ymax - ymin;
+    height = xmax - xmin;  
+    assert(width > 0, ['width: ', num2str(width), ', ymax: ', num2str(ymax), ', ymin: ', num2str(ymin)]); 
+    assert(height > 0, ['height: ', num2str(height), ', xmax: ', num2str(xmax), ', xmin: ', num2str(xmin)]); 
+    fprintf(fileID, '%d %d %d %d\n', floor(ymin), floor(xmin), floor(ymax), floor(xmax)); 
     end
     fclose(fileID);
 
