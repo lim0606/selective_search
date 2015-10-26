@@ -1,13 +1,16 @@
 %load ilsvrc_2015_train.mat
 %load ilsvrc_2015_msc_train.mat
-function [] = convert_mat_to_txt(boxes, images)
+function [] = convert_mat_to_txt(boxes, images, split)
 
 root_folder = '../ilsvrc_2015';
 if ~exist(root_folder, 'dir')
   mkdir(root_folder); 
 end
 
-root_folder = [root_folder, '/train']; 
+if sum(strcmp(split, {'train', 'val', 'test'})) == 0
+  error('Error: split must be either ''train'', ''val'', or ''test''');
+end
+root_folder = [root_folder, '/', split]; 
 if ~exist(root_folder, 'dir')
   mkdir(root_folder);
 end
