@@ -1,0 +1,9 @@
+first_el: 20001, last_el: 20121
+Warning: JPEG library error (8 bit), "Premature end of JPEG file"."
+> In readjpg (line 11)
+  In imread (line 415)
+  In op_selective_search_ilsvrc15_val (line 35)
+  In selective_search_ilsvrc15_batch_val (line 22)
+100/121 (elapsed time is 310.117 seconds for 100 images)
+121/121 (elapsed time is 63.667 seconds for 21 images)
+done
