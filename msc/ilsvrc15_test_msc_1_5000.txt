@@ -1,0 +1,66 @@
+first_el: 1, last_el: 5000
+Building with 'Xcode with Clang'.
+MEX completed successfully.
+Building with 'Xcode Clang++'.
+MEX completed successfully.
+Building with 'Xcode Clang++'.
+MEX completed successfully.
+100/5000 (elapsed time is 177.181 seconds for 100 images)
+200/5000 (elapsed time is 236.308 seconds for 100 images)
+/Users/lim-macbook/Desktop/ilsvrc15/ILSVRC2015/Data/DET/test/ILSVRC2012_test_00000896.JPEG
+sz(1): 4368, sz(2): 2912, max_dim: 3500 -> sz(1): 3500, sz(2): 2334
+sz(1): 3500, sz(2): 300/5000 (elapsed time is 336.505 seconds for 100 images)
+400/5000 (elapsed time is 400.156 seconds for 100 images)
+/Users/lim-macbook/Desktop/ilsvrc15/ILSVRC2015/Data/DET/test/ILSVRC2012_test_00001361.JPEG
+sz(1): 2592, sz(2): 3872, max_dim: 3500 -> sz(1): 2343, sz(2): 3500
+sz(1): 3500, sz(2): 500/5000 (elapsed time is 384.274 seconds for 100 images)
+600/5000 (elapsed time is 191.133 seconds for 100 images)
+700/5000 (elapsed time is 190.623 seconds for 100 images)
+800/5000 (elapsed time is 340.364 seconds for 100 images)
+900/5000 (elapsed time is 483.378 seconds for 100 images)
+1000/5000 (elapsed time is 184.681 seconds for 100 images)
+1100/5000 (elapsed time is 179.771 seconds for 100 images)
+1200/5000 (elapsed time is 217.036 seconds for 100 images)
+1300/5000 (elapsed time is 179.449 seconds for 100 images)
+1400/5000 (elapsed time is 175.634 seconds for 100 images)
+1500/5000 (elapsed time is 186.470 seconds for 100 images)
+1600/5000 (elapsed time is 209.368 seconds for 100 images)
+1700/5000 (elapsed time is 218.565 seconds for 100 images)
+1800/5000 (elapsed time is 171.679 seconds for 100 images)
+1900/5000 (elapsed time is 187.837 seconds for 100 images)
+2000/5000 (elapsed time is 177.029 seconds for 100 images)
+2100/5000 (elapsed time is 171.330 seconds for 100 images)
+2200/5000 (elapsed time is 234.902 seconds for 100 images)
+2300/5000 (elapsed time is 173.464 seconds for 100 images)
+/Users/lim-macbook/Desktop/ilsvrc15/ILSVRC2015/Data/DET/test/ILSVRC2012_test_00007670.JPEG
+sz(1): 4320, sz(2): 2880, max_dim: 3500 -> sz(1): 3500, sz(2): 2334
+sz(1): 3500, sz(2): 2400/5000 (elapsed time is 314.465 seconds for 100 images)
+2500/5000 (elapsed time is 209.477 seconds for 100 images)
+2600/5000 (elapsed time is 199.016 seconds for 100 images)
+2700/5000 (elapsed time is 333.531 seconds for 100 images)
+2800/5000 (elapsed time is 187.032 seconds for 100 images)
+2900/5000 (elapsed time is 201.386 seconds for 100 images)
+3000/5000 (elapsed time is 218.309 seconds for 100 images)
+3100/5000 (elapsed time is 197.736 seconds for 100 images)
+3200/5000 (elapsed time is 193.755 seconds for 100 images)
+3300/5000 (elapsed time is 217.791 seconds for 100 images)
+/Users/lim-macbook/Desktop/ilsvrc15/ILSVRC2015/Data/DET/test/ILSVRC2012_test_00011073.JPEG
+sz(1): 2336, sz(2): 3504, max_dim: 3500 -> sz(1): 2334, sz(2): 3500
+sz(1): 3500, sz(2): 3400/5000 (elapsed time is 274.492 seconds for 100 images)
+3500/5000 (elapsed time is 191.686 seconds for 100 images)
+3600/5000 (elapsed time is 187.294 seconds for 100 images)
+3700/5000 (elapsed time is 185.001 seconds for 100 images)
+3800/5000 (elapsed time is 227.047 seconds for 100 images)
+3900/5000 (elapsed time is 230.460 seconds for 100 images)
+4000/5000 (elapsed time is 499.088 seconds for 100 images)
+4100/5000 (elapsed time is 182.149 seconds for 100 images)
+4200/5000 (elapsed time is 188.051 seconds for 100 images)
+4300/5000 (elapsed time is 177.870 seconds for 100 images)
+4400/5000 (elapsed time is 214.923 seconds for 100 images)
+4500/5000 (elapsed time is 180.955 seconds for 100 images)
+4600/5000 (elapsed time is 186.064 seconds for 100 images)
+4700/5000 (elapsed time is 173.357 seconds for 100 images)
+4800/5000 (elapsed time is 181.382 seconds for 100 images)
+4900/5000 (elapsed time is 203.038 seconds for 100 images)
+5000/5000 (elapsed time is 299.765 seconds for 100 images)
+done

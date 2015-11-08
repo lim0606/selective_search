@@ -1,0 +1,21 @@
+first_el: 50001, last_el: 51294
+Building with 'Xcode with Clang'.
+MEX completed successfully.
+Building with 'Xcode Clang++'.
+MEX completed successfully.
+Building with 'Xcode Clang++'.
+MEX completed successfully.
+100/1294 (elapsed time is 258.309 seconds for 100 images)
+200/1294 (elapsed time is 354.987 seconds for 100 images)
+300/1294 (elapsed time is 350.952 seconds for 100 images)
+400/1294 (elapsed time is 318.238 seconds for 100 images)
+500/1294 (elapsed time is 248.577 seconds for 100 images)
+600/1294 (elapsed time is 264.013 seconds for 100 images)
+700/1294 (elapsed time is 258.183 seconds for 100 images)
+800/1294 (elapsed time is 247.272 seconds for 100 images)
+900/1294 (elapsed time is 283.058 seconds for 100 images)
+1000/1294 (elapsed time is 257.229 seconds for 100 images)
+1100/1294 (elapsed time is 261.763 seconds for 100 images)
+1200/1294 (elapsed time is 245.681 seconds for 100 images)
+1294/1294 (elapsed time is 239.016 seconds for 94 images)
+done
